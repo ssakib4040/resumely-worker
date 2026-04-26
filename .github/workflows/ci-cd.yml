@@ -42,12 +42,17 @@ jobs:
       - name: Check out code
         uses: actions/checkout@v4
 
+      - name: Validate DigitalOcean secrets
+        run: |
+          if [ -z "$DO_API_TOKEN" ] || [ -z "$DO_APP_ID" ]; then
+            echo "::error::Missing DO_API_TOKEN or DO_APP_ID repository secret. Add both in GitHub Settings > Secrets and variables > Actions."
+            exit 1
+          fi
+
       - name: Set up doctl
-        if: env.DO_API_TOKEN != '' && env.DO_APP_ID != ''
         uses: digitalocean/action-doctl@v2
         with:
           token: ${{ secrets.DO_API_TOKEN }}
 
       - name: Trigger DigitalOcean App Platform deployment
-        if: env.DO_API_TOKEN != '' && env.DO_APP_ID != ''
         run: doctl apps create-deployment "$DO_APP_ID"

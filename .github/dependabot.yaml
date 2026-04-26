@@ -6,60 +6,16 @@
 
 version: 2
 updates:
-  - package-ecosystem: "bundler"
-    directory: "/"
-    schedule:
-      interval: "daily"
-    groups:
-      dev-dependencies:
-        dependency-type: "development"
-        update-types:
-          - "minor"
-          - "patch"
-  - package-ecosystem: "composer"
-    directory: "/"
-    schedule:
-      interval: "daily"
-    groups:
-      dev-dependencies:
-        dependency-type: "development"
-        update-types:
-          - "minor"
-          - "patch"
-  - package-ecosystem: "docker"
-    directory: "/"
-    schedule:
-      interval: "daily"
-  - package-ecosystem: "github-actions"
-    directory: "/"
-    schedule:
-      interval: "daily"
-  - package-ecosystem: "gomod"
-    directory: "/"
-    schedule:
-      interval: "daily"
-  - package-ecosystem: "mix"
-    directory: "/"
-    schedule:
-      interval: "daily"
   - package-ecosystem: "npm"
     directory: "/"
     schedule:
-      interval: "daily"
+      interval: "weekly"
     groups:
-      dev-dependencies:
-        dependency-type: "development"
-        update-types:
-          - "minor"
-          - "patch"
-    ignore:
-      - dependency-name: "npm"
-        update-types: ["version-update:semver-major"]
-  - package-ecosystem: "pip"
+      dependency-updates:
+        patterns:
+          - "*"
+
+  - package-ecosystem: "github-actions"
     directory: "/"
     schedule:
-      interval: "daily"
-  - package-ecosystem: "pub"
-    directory: "/"
-    schedule:
-      interval: "daily"
+      interval: "weekly"
