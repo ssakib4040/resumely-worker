@@ -6,7 +6,7 @@ This repository is wired for DigitalOcean App Platform and GitHub Actions. The a
 
 ### Requirements
 
-* You need a DigitalOcean account. If you don't already have one, you can sign up at https://cloud.digitalocean.com/registrations/new.
+- You need a DigitalOcean account. If you don't already have one, you can sign up at https://cloud.digitalocean.com/registrations/new.
 
 ## Deploying the App
 
@@ -62,6 +62,7 @@ You can learn more about the App Platform and how to manage and update your appl
 ## Deleting the App
 
 When you no longer need this sample application running live, you can delete it by following these steps:
+
 1. Visit the Apps control panel at https://cloud.digitalocean.com/apps.
 2. Navigate to the app.
 3. In the **Settings** tab, click **Destroy**.
