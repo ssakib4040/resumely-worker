@@ -1,8 +1,8 @@
-name: sample-nodejs
+name: resumely-worker
 services:
 - environment_slug: node-js
   github:
     branch: main
     deploy_on_push: true
-    repo: digitalocean/sample-nodejs
-  name: sample-nodejs
+    repo: ssakib4040/resumely-worker
+  name: resumely-worker
