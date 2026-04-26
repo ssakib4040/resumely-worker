@@ -22,7 +22,7 @@ app.use(express.static(path.join(__dirname, "public")));
 // app.use("/", indexRouter);
 // app.use("/users", usersRouter);
 app.use("/", (req, res) => {
-  return res.send({ data: "Hello World 2x" });
+  return res.send({ data: "Hello World 3x" });
 });
 
 app.use("/users", (req, res) => {
