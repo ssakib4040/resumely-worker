@@ -25,6 +25,10 @@ app.use("/", (req, res) => {
   return res.send({ data: "Hello World" });
 });
 
+app.use("/users", (req, res) => {
+  return res.send({ data: "Hello Users" });
+});
+
 // catch 404 and forward to error handler
 app.use(function (req, res, next) {
   next(createError(404));
