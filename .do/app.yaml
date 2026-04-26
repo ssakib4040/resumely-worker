@@ -1,8 +1,8 @@
 name: resumely-worker
 services:
-- environment_slug: node-js
-  github:
-    branch: main
-    deploy_on_push: true
-    repo: ssakib4040/resumely-worker
-  name: resumely-worker
+  - environment_slug: node-js
+    github:
+      branch: main
+      deploy_on_push: true
+      repo: ssakib4040/resumely-worker
+    name: resumely-worker

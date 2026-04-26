@@ -1,10 +1,10 @@
 spec:
   name: resumely-worker
   services:
-  - environment_slug: node-js
-    git:
-      branch: main
-      repo_clone_url: https://github.com/ssakib4040/resumely-worker.git
-    instance_count: 1
-    instance_size_slug: apps-s-1vcpu-0.5gb
-    name: resumely-worker
+    - environment_slug: node-js
+      git:
+        branch: main
+        repo_clone_url: https://github.com/ssakib4040/resumely-worker.git
+      instance_count: 1
+      instance_size_slug: apps-s-1vcpu-0.5gb
+      name: resumely-worker
